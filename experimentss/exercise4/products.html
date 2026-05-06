@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - TechStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-detail {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 30px;
+            transition: all 0.3s;
+        }
+        
+        .product-detail:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: #1e3c72;
+        }
+        
+        .product-img-large {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        
+        .rating {
+            color: #ffd700;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .stock-status {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #28a745;
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛒 TechStore</h1>
+            <p>Browse Our Product Catalog</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="about.html">About</a>
+        </nav>
+        
+        <main>
+            <h2>Product Catalog</h2>
+            
+            <div class="product-detail">
+                <div class="product-img-large">💻</div>
+                <div>
+                    <h3 style="font-size: 1.8em; margin-bottom: 10px;">Dell Inspiron 15 Laptop</h3>
+                    <div class="rating">★★★★★ (4.5/5)</div>
+                    <div class="stock-status">In Stock</div>
+                    <p class="product-price" style="font-size: 2em; margin: 15px 0;">₹45,000</p>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">
+                        High-performance laptop perfect for work and entertainment. Features the latest 
+                        Intel processor and ample storage for all your needs.
+                    </p>
+                    <h4 style="color: #1e3c72; margin-top: 20px;">Specifications:</h4>
+                    <ul class="specs-list">
+                        <li>Intel Core i5 11th Gen Processor</li>
+                        <li>16GB DDR4 RAM</li>
+                        <li>512GB NVMe SSD</li>
+                        <li>15.6" Full HD Display (1920x1080)</li>
+                        <li>Intel UHD Graphics</li>
+                        <li>Windows 11 Home</li>
+                        <li>1 Year Warranty</li>
+                    </ul>
+                    <button class="btn" style="margin-top: 20px;">Add to Cart</button>
+                    <button class="btn" style="background: #28a745; margin-left: 10px;">Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product-detail">
+                <div class="product-img-large" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">📱</div>
+                <div>
+                    <h3 style="font-size: 1.8em; margin-bottom: 10px;">Samsung Galaxy A54 5G</h3>
+                    <div class="rating">★★★★☆ (4.3/5)</div>
+                    <div class="stock-status">In Stock</div>
+                    <p class="product-price" style="font-size: 2em; margin: 15px 0;">₹25,000</p>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">
+                        Experience the power of 5G with this feature-packed smartphone. Stunning display, 
+                        powerful camera, and long-lasting battery life.
+                    </p>
+                    <h4 style="color: #1e3c72; margin-top: 20px;">Specifications:</h4>
+                    <ul class="specs-list">
+                        <li>6.5" Super AMOLED Display</li>
+                        <li>128GB Internal Storage</li>
+                        <li>8GB RAM</li>
+                        <li>48MP Triple Camera System</li>
+                        <li>5000mAh Battery with Fast Charging</li>
+                        <li>5G Connectivity</li>
+                        <li>Android 13</li>
+                    </ul>
+                    <button class="btn" style="margin-top: 20px;">Add to Cart</button>
+                    <button class="btn" style="background: #28a745; margin-left: 10px;">Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="product-detail">
+                <div class="product-img-large" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">🎧</div>
+                <div>
+                    <h3 style="font-size: 1.8em; margin-bottom: 10px;">Sony WH-1000XM4 Headphones</h3>
+                    <div class="rating">★★★★★ (4.8/5)</div>
+                    <div class="stock-status">In Stock</div>
+                    <p class="product-price" style="font-size: 2em; margin: 15px 0;">₹5,000</p>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">
+                        Industry-leading noise cancellation with exceptional sound quality. Perfect for 
+                        music lovers and professionals who need focus.
+                    </p>
+                    <h4 style="color: #1e3c72; margin-top: 20px;">Features:</h4>
+                    <ul class="specs-list">
+                        <li>Active Noise Cancellation (ANC)</li>
+                        <li>30-hour Battery Life</li>
+                        <li>Bluetooth 5.0 Connectivity</li>
+                        <li>Touch Controls</li>
+                        <li>Quick Charge (10 min = 5 hours)</li>
+                        <li>Foldable Design with Carry Case</li>
+                        <li>Multi-device Pairing</li>
+                    </ul>
+                    <button class="btn" style="margin-top: 20px;">Add to Cart</button>
+                    <button class="btn" style="background: #28a745; margin-left: 10px;">Buy Now</button>
+                </div>
+            </div>
+            
+            <a href="../index.html" class="back-link">← Back to Main Index</a>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 TechStore. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

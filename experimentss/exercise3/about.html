@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Personal Website with CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+        }
+        
+        .education-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>About Me</h1>
+            <p>Get to know more about my background and skills</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+        <main>
+            <div class="profile-section">
+                <div class="profile-image">👨‍💻</div>
+                <div>
+                    <h2 style="color: #667eea; margin-bottom: 10px;">Computer Science Student</h2>
+                    <p style="font-size: 1.1em; line-height: 1.8;">
+                        I am a passionate Computer Science and Engineering student with a strong interest 
+                        in web development, programming, and emerging technologies. I love creating 
+                        innovative solutions and learning new skills.
+                    </p>
+                </div>
+            </div>
+            
+            <section>
+                <h2>Technical Skills</h2>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <strong style="color: #667eea;">HTML5</strong>
+                        <p>Advanced proficiency in semantic HTML</p>
+                    </div>
+                    <div class="skill-item">
+                        <strong style="color: #764ba2;">CSS3</strong>
+                        <p>Styling with modern CSS techniques</p>
+                    </div>
+                    <div class="skill-item">
+                        <strong style="color: #f093fb;">JavaScript</strong>
+                        <p>Interactive web applications</p>
+                    </div>
+                    <div class="skill-item">
+                        <strong style="color: #f5576c;">PHP</strong>
+                        <p>Server-side scripting</p>
+                    </div>
+                    <div class="skill-item">
+                        <strong style="color: #667eea;">MySQL</strong>
+                        <p>Database management</p>
+                    </div>
+                    <div class="skill-item">
+                        <strong style="color: #764ba2;">Git</strong>
+                        <p>Version control systems</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section style="margin-top: 40px;">
+                <h2>Education</h2>
+                <div class="education-card">
+                    <h3 style="margin-bottom: 10px;">B.Tech in Computer Science and Engineering</h3>
+                    <p style="font-size: 1.1em;">Faculty of Engineering and Technology</p>
+                    <p style="margin-top: 10px;">Year: 2023</p>
+                    <p style="margin-top: 15px; line-height: 1.6;">
+                        Specializing in web technologies, software development, and database management. 
+                        Completed comprehensive coursework in data structures, algorithms, and full-stack development.
+                    </p>
+                </div>
+            </section>
+            
+            <section style="margin-top: 40px;">
+                <h2>Interests</h2>
+                <ul>
+                    <li style="margin-bottom: 10px;">🌐 Web Development & Design</li>
+                    <li style="margin-bottom: 10px;">💻 Software Engineering</li>
+                    <li style="margin-bottom: 10px;">🤖 Artificial Intelligence & Machine Learning</li>
+                    <li style="margin-bottom: 10px;">📱 Mobile App Development</li>
+                    <li style="margin-bottom: 10px;">☁️ Cloud Computing</li>
+                </ul>
+            </section>
+            
+            <a href="../index.html" class="back-link">← Back to Main Index</a>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 Personal Website | Exercise 3 - CSS Styling</p>
+        </footer>
+    </div>
+</body>
+</html>

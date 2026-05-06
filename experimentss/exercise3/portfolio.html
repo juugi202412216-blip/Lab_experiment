@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Personal Website with CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .project-body {
+            padding: 20px;
+        }
+        
+        .project-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Portfolio</h1>
+            <p>Showcasing my projects and achievements</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+        <main>
+            <section>
+                <h2>Featured Projects</h2>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 style="margin: 0;">Personal Website</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>A responsive personal website built using HTML5 and CSS3 with modern design principles.</p>
+                            <div>
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 style="margin: 0;">E-Commerce Website</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>A fully functional e-commerce platform with product listings, shopping cart, and user authentication.</p>
+                            <div>
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 style="margin: 0;">Scientific Calculator</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>An interactive scientific calculator with advanced mathematical operations built using JavaScript.</p>
+                            <div>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">Math.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 style="margin: 0;">Form Validation System</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Client-side and server-side form validation using JavaScript and PHP with real-time feedback.</p>
+                            <div>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">PHP</span>
+                                <span class="project-tag">Validation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 style="margin: 0;">Database Management</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Product management system with CRUD operations using PHP and MySQL database.</p>
+                            <div>
+                                <span class="project-tag">PHP</span>
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">CRUD</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 style="margin: 0;">Session Management</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>User session and cookie management system for maintaining state across multiple pages.</p>
+                            <div>
+                                <span class="project-tag">PHP</span>
+                                <span class="project-tag">Sessions</span>
+                                <span class="project-tag">Cookies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section style="margin-top: 50px;">
+                <h2>Achievements</h2>
+                <ol class="achievement-list">
+                    <li style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border-radius: 10px;">
+                        Completed Web Technology Lab Course with Excellence
+                    </li>
+                    <li style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
+                        Built 10+ Full-Stack Web Applications
+                    </li>
+                    <li style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; border-radius: 10px;">
+                        Mastered Frontend and Backend Technologies
+                    </li>
+                    <li style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); color: white; border-radius: 10px;">
+                        Implemented Advanced JavaScript Features
+                    </li>
+                </ol>
+            </section>
+            
+            <a href="../index.html" class="back-link">← Back to Main Index</a>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 Personal Website | Exercise 3 - CSS Styling</p>
+        </footer>
+    </div>
+</body>
+</html>

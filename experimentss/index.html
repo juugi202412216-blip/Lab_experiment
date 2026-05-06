@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technology Lab Experiments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .experiments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .experiment-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .experiment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .experiment-card h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .experiment-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .experiment-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .experiment-card a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Technology Lab Experiments</h1>
+            <p>B.Tech Computer Science and Engineering 2023</p>
+        </header>
+
+        <div class="content">
+            <h2 style="color: #2d3748; margin-bottom: 10px;">Lab Exercises</h2>
+            <p style="color: #666; margin-bottom: 20px;">Click on any experiment below to view the implementation</p>
+
+            <div class="experiments-grid">
+                <!-- Exercise 1 -->
+                <div class="experiment-card">
+                    <h3>Exercise 1 - Personal Website</h3>
+                    <p>A personal website with minimum 4 web pages using basic HTML tags including home, about, portfolio, and contact pages.</p>
+                    <a href="exercise1/index.html">View Exercise 1</a>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="experiment-card">
+                    <h3>Exercise 2 - E-Commerce Website</h3>
+                    <p>A static e-commerce website using advanced HTML tags with product listings, categories, and shopping features.</p>
+                    <a href="exercise2/index.html">View Exercise 2</a>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="experiment-card">
+                    <h3>Exercise 3 - Personal Website with CSS</h3>
+                    <p>Enhanced version of Exercise 1 using Inline, Internal, and External CSS styling techniques.</p>
+                    <a href="exercise3/index.html">View Exercise 3</a>
+                </div>
+
+                <!-- Exercise 4 -->
+                <div class="experiment-card">
+                    <h3>Exercise 4 - E-Commerce Website with CSS</h3>
+                    <p>Enhanced version of Exercise 2 demonstrating the use of Inline, Internal, and External CSS for styling.</p>
+                    <a href="exercise4/index.html">View Exercise 4</a>
+                </div>
+
+                <!-- Exercise 5 -->
+                <div class="experiment-card">
+                    <h3>Exercise 5 - Calculator with JavaScript</h3>
+                    <p>A fully functional scientific calculator built using JavaScript inside HTML and CSS. Features include basic arithmetic operations and error handling.</p>
+                    <a href="exercise5/index.html">View Exercise 5</a>
+                </div>
+
+                <!-- Exercise 6 -->
+                <div class="experiment-card">
+                    <h3>Exercise 6 - Forms with Validation</h3>
+                    <p>Registration and login forms for the e-commerce website with client-side validation using JavaScript.</p>
+                    <a href="exercise6/index.html">View Exercise 6</a>
+                </div>
+
+                <!-- Exercise 7 -->
+                <div class="experiment-card">
+                    <h3>Exercise 7 - Event Handling</h3>
+                    <p>An interactive e-commerce website demonstrating various JavaScript event handling techniques such as click events, hover events, form submission events, and dropdown change events.</p>
+                    <a href="exercise7/index.html">View Exercise 7</a>
+                </div>
+
+                <!-- Exercise 8 -->
+                <div class="experiment-card">
+                    <h3>Exercise 8 - PHP Form Handling</h3>
+                    <p>Form handling and validation for both personal and e-commerce websites using PHP server-side processing.</p>
+                    <a href="exercise8/index.html">View Exercise 8</a>
+                </div>
+
+                <!-- Exercise 9 -->
+                <div class="experiment-card">
+                    <h3>Exercise 9 - PHP & MySQL Integration</h3>
+                    <p>Create, store, retrieve and display product details for the e-commerce website using PHP and MySQL database.</p>
+                    <a href="exercise9/index.html">View Exercise 9</a>
+                </div>
+
+                <!-- Exercise 10 -->
+                <div class="experiment-card">
+                    <h3>Exercise 10 - Sessions & Cookies</h3>
+                    <p>Implementation of sessions and cookies to store user information across multiple pages in the e-commerce website.</p>
+                    <a href="exercise10/index.html">View Exercise 10</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Faculty of Engineering and Technology | B.Tech Computer Science and Engineering</p>
+        </footer>
+    </div>
+</body>
+</html>

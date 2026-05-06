@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TechStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛒 TechStore</h1>
+            <p>Login to Your Account</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="../exercise4/products.html">Products</a>
+        </nav>
+        
+        <main>
+            <div class="form-container">
+                <h2>Welcome Back!</h2>
+                
+                <div class="success-message" id="successMessage">
+                    ✓ Login successful! Redirecting to products...
+                </div>
+                
+                <form id="loginForm" novalidate>
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address *</label>
+                        <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email">
+                        <div class="error-message" id="loginEmailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Password *</label>
+                        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password">
+                        <div class="error-message" id="loginPasswordError"></div>
+                    </div>
+                    
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                        <label style="display: flex; align-items: center; font-weight: normal;">
+                            <input type="checkbox" id="rememberMe" style="width: auto; margin-right: 8px;">
+                            Remember me
+                        </label>
+                        <a href="#" style="color: #1e3c72; text-decoration: none; font-size: 14px;">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                
+                <div class="form-footer">
+                    Don't have an account? <a href="register.html">Register here</a>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #e7f3ff; border-radius: 10px; border-left: 4px solid #1e3c72;">
+                    <strong style="color: #1e3c72;">Demo Credentials:</strong><br>
+                    <span style="color: #666;">Email: demo@techstore.com</span><br>
+                    <span style="color: #666;">Password: Demo@123</span>
+                </div>
+            </div>
+            
+            <a href="../index.html" class="back-link">← Back to Main Index</a>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 TechStore. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const loginEmail = document.getElementById('loginEmail');
+        const loginPassword = document.getElementById('loginPassword');
+        const successMessage = document.getElementById('successMessage');
+
+        // Real-time validation
+        loginEmail.addEventListener('blur', validateLoginEmail);
+        loginPassword.addEventListener('blur', validateLoginPassword);
+
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const isEmailValid = validateLoginEmail();
+            const isPasswordValid = validateLoginPassword();
+            
+            if (isEmailValid && isPasswordValid) {
+                // Check demo credentials
+                if (loginEmail.value === 'demo@techstore.com' && loginPassword.value === 'Demo@123') {
+                    successMessage.classList.add('show');
+                    
+                    // Redirect to products after 2 seconds
+                    setTimeout(() => {
+                        window.location.href = '../exercise4/products.html';
+                    }, 2000);
+                } else {
+                    // For any other valid credentials, show success
+                    successMessage.classList.add('show');
+                    
+                    setTimeout(() => {
+                        window.location.href = '../exercise4/products.html';
+                    }, 2000);
+                }
+            }
+        });
+
+        function validateLoginEmail() {
+            const value = loginEmail.value.trim();
+            const errorElement = document.getElementById('loginEmailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (value === '') {
+                showError(loginEmail, errorElement, 'Email is required');
+                return false;
+            } else if (!emailRegex.test(value)) {
+                showError(loginEmail, errorElement, 'Please enter a valid email address');
+                return false;
+            } else {
+                showSuccess(loginEmail, errorElement);
+                return true;
+            }
+        }
+
+        function validateLoginPassword() {
+            const value = loginPassword.value;
+            const errorElement = document.getElementById('loginPasswordError');
+            
+            if (value === '') {
+                showError(loginPassword, errorElement, 'Password is required');
+                return false;
+            } else if (value.length < 6) {
+                showError(loginPassword, errorElement, 'Password must be at least 6 characters');
+                return false;
+            } else {
+                showSuccess(loginPassword, errorElement);
+                return true;
+            }
+        }
+
+        function showError(input, errorElement, message) {
+            input.classList.add('error');
+            input.classList.remove('success');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+        }
+
+        function showSuccess(input, errorElement) {
+            input.classList.remove('error');
+            input.classList.add('success');
+            errorElement.classList.remove('show');
+        }
+
+        // Auto-fill demo credentials on page load (for testing)
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('demo') === 'true') {
+                loginEmail.value = 'demo@techstore.com';
+                loginPassword.value = 'Demo@123';
+            }
+        });
+    </script>
+</body>
+</html>
